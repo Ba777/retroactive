@@ -1,0 +1,13 @@
+insert 2
+insert 1
+insert 4
+insert 2
+insert_retro 1000 1000
+upper_bound 999
+lower_bound 1
+lower_bound_retro 1 0
+erase 2
+erase 1
+lower_bound 1
+delete_operation 1001
+lower_bound 1
