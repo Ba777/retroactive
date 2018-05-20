@@ -1,5 +1,5 @@
-#ifndef RETROACTIVE_DICTIONARY_H_INCLUDED
-#define RETROACTIVE_DICTIONARY_H_INCLUDED
+#ifndef RETROACTIVE_UNORDERED_SET_H_INCLUDED
+#define RETROACTIVE_UNORDERED_SET_H_INCLUDED
 
 #include <functional>
 #include <limits>
@@ -8,7 +8,7 @@
 #include <utility>
 
 template<typename T>
-class retroactive_dictionary {
+class retroactive_unordered_set {
 
 private:
     std::map<long long, T> operations;
@@ -21,24 +21,24 @@ private:
 public:
     /*** Friend operators ***/
     template<class T1>
-        friend bool operator==(const retroactive_dictionary<T1>& x, const retroactive_dictionary<T1> &y);
+        friend bool operator==(const retroactive_unordered_set<T1>& x, const retroactive_unordered_set<T1> &y);
     template<class T1>
-        friend bool operator!=(const retroactive_dictionary<T1>& x, const retroactive_dictionary<T1> &y);
+        friend bool operator!=(const retroactive_unordered_set<T1>& x, const retroactive_unordered_set<T1> &y);
 
 
     /*** Constructors and destructor ***/
-    retroactive_dictionary<T>() : operations(), sequences() { }
+    retroactive_unordered_set<T>() : operations(), sequences() { }
 
-    retroactive_dictionary<T>(const retroactive_dictionary<T>& other) {
+    retroactive_unordered_set<T>(const retroactive_unordered_set<T>& other) {
         operations = other.operations;
         sequences = other.sequences;
     }
 
-    ~retroactive_dictionary<T>() { }
+    ~retroactive_unordered_set<T>() { }
 
 
     /*** Operators ***/
-    retroactive_dictionary<T>& operator=(const retroactive_dictionary<T>& other) {
+    retroactive_unordered_set<T>& operator=(const retroactive_unordered_set<T>& other) {
         operations = other.operations;
         sequences = other.sequences;
         return *this;
@@ -108,13 +108,13 @@ public:
 
 /*** Friend operators implementation ***/
 template<class T>
-inline bool operator==(const retroactive_dictionary<T>& x, const retroactive_dictionary<T> &y) {
+inline bool operator==(const retroactive_unordered_set<T>& x, const retroactive_unordered_set<T> &y) {
     return x.operations == y.operations;
 }
 
 template<class T>
-inline bool operator!=(const retroactive_dictionary<T>& x, const retroactive_dictionary<T> &y) {
+inline bool operator!=(const retroactive_unordered_set<T>& x, const retroactive_unordered_set<T> &y) {
     return !(x == y);
 }
 
-#endif // RETROACTIVE_DICTIONARY_H_INCLUDED
+#endif // RETROACTIVE_UNORDERED_SET_H_INCLUDED

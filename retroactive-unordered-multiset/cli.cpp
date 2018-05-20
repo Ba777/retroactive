@@ -2,12 +2,12 @@
 #include <iostream>
 #include <string>
 
-#include "retroactive_dictionary.h"
+#include "retroactive_unordered_multiset.h"
 
 using namespace std;
 
 void run(istream& cin, bool allow_files = false) {
-    retroactive_dictionary<string> rd;
+    retroactive_unordered_multiset<string> rd;
 
     string operation;
     string x;

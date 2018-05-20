@@ -1,0 +1,25 @@
+insert Hello
+insert my
+insert name
+insert is
+insert Ivan
+find Ivan
+find_retro Ivan 1
+find Divan
+delete_operation 1
+find_retro my 2
+insert_retro Divan 1
+insert_retro wow -10000000
+find Divan
+find_retro wow -1000000000
+erase_retro Divan 10
+find_retro Divan 9
+find_retro Divan 10
+insert_retro Multiset 100
+insert Multiset
+find Multiset
+erase Multiset
+find Multiset
+erase Multiset
+find Multiset
+erase Multiset
